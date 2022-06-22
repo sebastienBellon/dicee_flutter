@@ -15,10 +15,10 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.red,
         appBar: AppBar(
-          title: Text('Dicee'),
+          title: const Text('Dicee'),
           backgroundColor: Colors.red,
         ),
-        body: DicePage(),
+        body: const DicePage(),
       ),
     );
   }
@@ -29,6 +29,19 @@ class DicePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Row(
+      children: const <Widget>[
+        Expanded(
+          child: Image(
+            image: AssetImage('images/dice1.png'),
+          ),
+        ),
+        Expanded(
+          child: Image(
+            image: AssetImage('images/dice2.png'),
+          ),
+        )
+      ],
+    );
   }
 }
