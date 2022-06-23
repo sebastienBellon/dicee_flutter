@@ -24,8 +24,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-
-
 class DicePage extends StatefulWidget {
   const DicePage({Key? key}) : super(key: key);
 
@@ -44,13 +42,21 @@ class _DicePageState extends State<DicePage> {
           Expanded(
             child: TextButton(
               child: Image.asset('images/dice$leftDiceNumber.png'),
-              onPressed: () {},
+              onPressed: () {
+                setState(() {
+                  leftDiceNumber = 5;
+                });
+              },
             ),
           ),
           Expanded(
             child: TextButton(
               child: Image.asset('images/dice$leftDiceNumber.png'),
-              onPressed: () {},
+              onPressed: () {
+                setState(() {
+                  leftDiceNumber = 2;
+                });
+              },
             ),
           )
         ],
